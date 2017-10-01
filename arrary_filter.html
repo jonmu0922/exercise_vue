@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <ul v-cloak>
+
+            <li v-for="a in list">
+                {{a}}
+            </li>
+
+            <li>
+                <input type="text" v-model="filter" />
+            </li>
+
+            <li v-for="a in filterlist">
+                {{a}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                filter: '',
+                list: ['aaaa', 'bbbbb', 'ccccc', 'ddddd', 'cccccc']
+            },
+            computed: {
+                filterlist: function () {
+                    var _this = this;
+                    var result = [];
+
+                    if(this.filter == '')                    
+                        return this.list;
+                    
+                    this.list.forEach(function(a) {
+
+                        //console.log(a);
+                        //console.log(_this.filter);
+                        //console.log(a.indexOf(_this.filter));
+                        
+                        if(a.indexOf(_this.filter) == 0)
+                            result[result.length] = a;
+                    });
+                    return result;
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
