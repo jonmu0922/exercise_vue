@@ -51,9 +51,10 @@
 
         <template id="hello">
                 <section>
-                    Hello {{name}}! <br />
-                    {{ $route.params.name }} <br />
-                     <br />
+                    prop['name'] : {{name}} <br />
+                    $route.params.name : {{ $route.params.name }} <br />
+                    data.Name2 : {{Name2}} <br />
+                    <br />
                 </section>
             </template>
         Footer
@@ -110,6 +111,7 @@
                 Name2: '';
             },
             created () {
+                // 在 created 取得
                 this.Name2 = this.$route.params.name;
             }
         });
