@@ -106,7 +106,11 @@
             props: ['name'],
             template: '#hello',            
             data: function () {
-                Name2: this.$route.params.name  // 取不到
+                //Name2: this.$route.params.name  // 取不到
+                Name2: '';
+            },
+            created () {
+                this.Name2 = this.$route.params.name;
             }
         });
 
