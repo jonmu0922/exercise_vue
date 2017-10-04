@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    
+    
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.7.0/vue-router.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        "use strict";
+        
+        let str = 'hello world';
+
+        console.log(str.indexOf('world'))   // 6
+        console.log(str.includes('world'))   // es6  true
+        console.log(str.startsWith('world'))   // es6  false
+        console.log(str.endsWith('world'))   // es6  true
+        console.log(str.repeat(3))   // es6  hello worldhello worldhello world
+
+        let name='jack'; 
+        let temp=`我叫${name}`; 
+        console.log(temp);  // 我叫jack
+
+        let a = 1, b= 2;
+        let c = `a+b = ${a+b}`
+        console.log(c); // a+b = 3
+
+        // 多行文字
+        let text = (`cat
+                    dog
+                    nickelodeon
+                    `);
+
+        console.log(text);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+npm init
+
+// 先全域安裝
+npm install --global gulp-cli
+
+// 資料夾不可為 "gulp" 會有 "NPM Refusing to install gulp as a dependency of itself" 錯誤
+
+// 安裝 babel
+npm install --save-dev gulp-babel babel-preset-es2015
