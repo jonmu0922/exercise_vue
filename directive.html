@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <select v-model="color">
+            <option v-for="c in colors">{{c}}</option>
+        </select>
+        <div v-mycolor="color">
+            Color: {{color}}
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+
+    <script>
+        // https://cn.vuejs.org/v2/guide/custom-directive.html
+        // 全局API
+        "use strict";
+
+        Vue.directive('mycolor', function (el, binding, vnode) {
+            console.log(binding.value)
+            el.style = 'color:' + binding.value
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                color: 'green',
+                colors:['green','blue','red']
+            }
+        })
+
+    </script>
+</body>
+
+</html>

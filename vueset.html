@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{count}}
+        <br />
+        {{goodName}}
+        <br />
+        <button onclick="Add1()"> Vue.set(outData,'count',100); </button>
+        <button onclick="Add2()"> app.count++;</button>
+        <button onclick="Add3()">	outData.count++;</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+    
+    <script>
+
+        // https://cn.vuejs.org/v2/guide/custom-directive.html
+        // 全局API
+        "use strict";
+
+        //在构造器外部声明数据
+        var outData={
+            count:1,
+            goodName:'car'
+        }
+
+        var app = new Vue({
+            el:'#app',
+            data:outData //引用外部数据
+        })
+
+        function Add1(){
+            Vue.set(outData,'count', 100);            
+        }
+
+        function Add2(){
+            app.count++
+            console.log(app.count)
+        }
+
+        function Add3(){
+            outData.count += 1
+            console.log(outData.count)
+        }
+    </script>
+</body>
+
+</html>

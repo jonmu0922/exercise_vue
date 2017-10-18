@@ -48,10 +48,7 @@
                     if(this.filter == '')                    
                         return this.list;
                     
-                    this.list.forEach(function(a) {
-                        //console.log(a);
-                        //console.log(_this.filter);
-                        //console.log(a.indexOf(_this.filter));                        
+                    this.list.forEach(function(a) {                                    
                         if(a.indexOf(_this.filter) == 0)
                             result[result.length] = a;
                     });

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <div id="app2"></div>
+
+    <div id="app3"></div>
+
+    <template id="template2">
+            <h2 style="color:red">Template2</h2>
+    </template>
+
+    <script type="x-template" id="template3">
+            <h2 style="color:red">Template3</h2>
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+    
+    <script>
+        "use strict";
+      
+
+        var app = new Vue({
+            el:'#app',
+            template:`<h1 style="color:red">Template1</h1>`            
+        })
+
+        var app2 = new Vue({
+            el:'#app2',
+            template:'#template2'
+        })
+
+        var app3 = new Vue({
+            el:'#app3',
+            template:'#template3'
+        })
+
+      
+    </script>
+</body>
+
+</html>
