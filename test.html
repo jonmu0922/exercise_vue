@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red
+        }
+        .green {
+            background-color:green
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+        Hello world1
+    </div>
+    <br>
+    <div class="red">
+        Hello world2
+    </div>
+    <br>
+    <div class="red">
+        Hello world3
+    </div>
+    <script>
+        //var tabs = document.getElementsByClassName('red');  
+        var tabs = document.querySelectorAll(".red")
+        var cnt = tabs.length;
+        //console.log(tabs.length)
+
+        for (var i = 0; i <= cnt; i++) {
+            console.log(i)
+            console.log(tabs[0])
+            //tabs[i].className = "green"     
+            //document.getElementsByClassName('red')[i].className = 'green'
+        }           
+            
+    </script>
+</body>
+</html>
